@@ -1,0 +1,102 @@
+:: StoryTitle
+Styx
+
+
+:: StoryData
+{
+  "ifid": "2DCBCBF4-4C02-4E78-B2BD-4EB11612656C",
+  "format": "Harlowe",
+  "format-version": "3.3.5",
+  "start": "Landing Page",
+  "zoom": 1
+}
+
+
+:: Back {"position":"400,125","size":"100,100"}
+You find yourself sat in a small wooden boat, very similar to as you saw from your front. There is a long river stretching far behind of you. You can't see where it leads, or how far it goes on for. It feels very familiar, as though you'd glimpsed an identical image only seconds ago.
+
+[[Look Forward|The Boat]]
+[[Look Right|Right]]
+[[Look Down|Down]]
+[[Look Up|Up]]
+[[Look Left|Left]]
+
+
+:: Down {"position":"525,350","size":"100,100"}
+The boat rocks gently from left to right. You can see your knees, clothed. You are wearing normal clothes. There is (visited:"Oar")[no longer] an oar at your feet(visited:"Oar")[, but in your hands]. The oar looks normal, as do your feet. You are wearing shoes, which are also normal.
+
+
+(if: (visited:"Oar") is false)[[[Pick Up The Oar|Oar]]]
+[[Look Forward|The Boat]]
+[[Look Left|Left]]
+[[Look Right|Right]]
+[[Look Up|Up]]
+[[Look Back|Back]]
+
+
+:: Landing Page {"position":"125,250","size":"100,100"}
+Welcome to Styx.
+
+Story: A meandering journey with no turning back.
+
+Goal: To piece together your identity from flashbacks.
+
+[[Begin|Wake Up]]
+
+
+:: Left {"position":"400,300","size":"100,100"}
+There is a green field to your left. You can see some trees, verdant, but empty. For the first time, you realise that you can hear nothing at all. You notice your left shoulder.
+
+That's all you can see.
+
+[[Look Forward|The Boat]]
+[[Look Right|Right]]
+[[Look Down|Down]]
+[[Look Up|Up]]
+[[Look Back|Back]]
+
+
+:: Oar {"position":"525,475","size":"100,100"}
+You pick up the oar.
+
+[[It's Heavy|Down]]
+
+
+:: Right {"position":"650,275","size":"100,100"}
+There is a grey field to your right. In the distance you think you can see a small figure. It disappears before you can make it out. Never mind.
+
+[[Look Forward|The Boat]]
+[[Look Left|Left]]
+[[Look Down|Down]]
+[[Look Up|Up]]
+[[Look Back|Back]]
+
+
+:: The Boat {"position":"525,200","size":"100,100"}
+You find yourself sat in a small wooden boat. There is a long river stretching far in front of you. You can't see where it leads, or how far it goes on for. 
+(visited:"oar")
+[Start Rowing]
+[[Look Left|Left]]
+[[Look Right|Right]]
+[[Look Down|Down]]
+[[Look Up|Up]]
+[[Look Back|Back]]
+
+
+:: Up {"position":"525,75","size":"100,100"}
+(background: gray)[The Sky Is Grey]]
+
+[[Look Forward|The Boat]]
+[[Look Left|Left]]
+[[Look Right|Right]]
+[[Look Down|Down]]
+[[Look Back|Back]]
+
+
+:: Wake Up {"position":"275,125","size":"100,100"}
+Your head feels heavy. (t8n:"fade") + (t8n-delay:3s) + (t8n-time: 2s)[Your vision is dark.] (t8n:"fade") + (t8n-delay:8s) + (transition-time: 2s)[Fuzzy lights flicker in and out, making strange shapes with dark, bleary colours.] (t8n:"fade") + (t8n-delay:12s) + (transition-time: 2s)[You can hardly focus on one before it fizzles out of existence.] (t8n:"fade") + (t8n-delay:16s) + (transition-time: 2s)[Yet another appears immediately in its place.] (t8n:"fade") + (t8n-delay:20s) + (transition-time: 2s)[There is no time to grieve for small shapes.] (t8n:"fade") + (t8n-delay:24s) + (transition-time: 2s)[You wonder how long these dark lights will dance for.]
+
+(t8n:"fade") + (t8n-delay:30s) + (transition-time: 2s)[Oh, right.]
+(t8n:"fade") + (t8n-delay:33s) + (transition-time: 2s)[You remember now.]
+
+(t8n:"fade") + (t8n-delay:36s) + (transition-time: 2s)[[[You Have To Open Your Eyes|The Boat]]]
